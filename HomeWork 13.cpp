@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <string>
 #include <ctime>
 
 int main()
@@ -25,9 +26,11 @@ int main()
     int number;
     std::string answ = "No consecutive numbers \n \n";
     std::cin >> number;
+    std::string strnumber = std::to_string(number);
+    
 
-
-    for (int i = 0; ; i++)
+    
+    for (int i = 1; i < strnumber.size(); i++)
     {
         int prev = number % 10;
         number /= 10;
@@ -40,6 +43,7 @@ int main()
         }
     }
     std::cout << answ;
+}
     
 
 
